@@ -1,0 +1,19 @@
+@use '../scss/variables' as *;
+
+@mixin flex($align-items, $justify-content) {
+  display: flex;
+  align-items: $align-items;
+  justify-content: $justify-content;
+}
+
+@mixin text-title {
+  font-weight: $fw-normal;
+  font-size: $fs-header;
+  line-height: $lh-header;
+}
+
+@mixin text-paragraph {
+  font-weight: $fw-normal;
+  font-size: $fs-paragraph;
+  line-height: $lh-paragraph;
+}

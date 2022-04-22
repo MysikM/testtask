@@ -1,0 +1,54 @@
+@use '../../scss' as *;
+
+.card {
+  padding: 20px;
+  background-color: $white;
+  border-radius: 10px;
+
+  @include flex(center, center);
+  flex-direction: column;
+  flex: 1 0 30%;
+
+  @include large {
+    flex: 1 0 30%;
+  }
+
+  @include medium {
+    flex: 0 1 344px
+  }
+
+  @include small {
+    flex: 0 1 328px;
+  }
+
+
+  &__img {
+    border-radius: 50%;
+  }
+
+  &__name {
+    margin-top: 20px;
+    @include text-paragraph;
+  }
+  &__position {
+    margin-top: 20px;
+    @include text-paragraph;
+  }
+  &__mail {
+    position: relative;
+    @include text-paragraph;
+  }
+  &__phone {
+    @include text-paragraph;
+  }
+}
+
+.hover {
+  padding: 3px 16px !important;
+  color: $white !important;
+  border-radius: 4px !important;
+  background-color: rgba($black, 0.87) !important;
+  &::before, &::after {
+    content: none !important;
+  }
+}

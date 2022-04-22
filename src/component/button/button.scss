@@ -1,0 +1,23 @@
+@use '../../scss' as *;
+
+.btn {
+  background-color: $btn-color;
+  border-radius: 80px;
+  width: 100px;
+  height: 34px;
+  @include text-paragraph;
+
+  transition: background-color 0.3s ease;
+
+  cursor: pointer;
+
+  &:hover {
+    background-color: $btn-color_hover;
+  }
+
+  &:disabled {
+    background-color: $btn-color_disabled;
+    color: $white;
+    cursor: auto;
+  }
+}

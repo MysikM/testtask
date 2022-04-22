@@ -1,0 +1,41 @@
+@use '../../scss' as *;
+
+.container-input{
+  width: 100%;
+  position: relative;
+
+  &__item {
+    position: relative;
+    padding: 14px 10px 14px 16px;
+    border: 1px solid $border-color;
+    color: $input-value-color;
+    background: transparent;
+    @include text-paragraph;
+    width: 100%;
+
+
+    &::placeholder {
+      color: $input-placeholder-color;
+    }
+
+    &--error{
+      border-color: $error-color;
+    }
+  }
+
+  &__helper {
+    position: absolute;
+    bottom: -20px;
+    left: 17px;
+    color: $input-placeholder-color;
+    font-family: $font-family;
+    font-weight: $fw-normal;
+    font-size: 12px;
+    line-height: 14px;
+
+    &--error {
+      color: $error-color;
+    }
+  }
+
+}

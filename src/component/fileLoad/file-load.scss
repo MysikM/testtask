@@ -1,0 +1,60 @@
+@use '../../scss' as *;
+
+input[type="file"] {
+  display: none;
+}
+.file-input {
+  position: relative;
+  width: 100%;
+  @include flex(center, center);
+
+  &__custom {
+    padding: 0 14px 0 16px;
+    height: 54px;
+    background-color: $line-gray;
+    border: 1px solid rgba($black, 0.87);
+    border-radius: 4px 0 0 4px;
+    @include text-paragraph;
+    @include flex(center, center);
+    cursor: pointer;
+
+    &--error{
+      border-color: $error-color;
+      border-width: 2px;
+    }
+  }
+
+  &__preview{
+    width: 100%;
+    padding-left: 16px;
+    padding-right: 10px;
+    height: 54px;
+    border: 1px solid $border-color;
+    border-left-width: 0;
+    @include text-paragraph;
+    @include flex(center, flex-start);
+    border-radius: 0 4px 4px 0;
+    color: $input-placeholder-color;
+    overflow: hidden;
+
+    &--added {
+      color: $black;
+    }
+
+    &--error{
+      border-color: $error-color;
+      border-width: 2px;
+      border-left-width: 0;
+    }
+  }
+
+  &__error {
+    position: absolute;
+    color: $error-color;
+    font-family: $font-family;
+    line-height: 14px;
+    font-size: 12px;
+    bottom: -16px;
+    left: 18px;
+  }
+}

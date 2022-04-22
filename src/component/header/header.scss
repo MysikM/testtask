@@ -1,0 +1,14 @@
+@use '../../scss' as *;
+
+.header {
+  background-color: $white;
+}
+.header__nav {
+  @include flex(center, space-between);
+  height: 60px;
+
+}
+
+.header__btns > button:not(:last-child) {
+  margin-right: 10px;
+}
