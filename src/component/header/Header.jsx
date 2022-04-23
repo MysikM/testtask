@@ -3,15 +3,16 @@ import logo from '../../../src/assets/Logo.svg';
 
 import './header.scss';
 import Button from "../button/Button";
+import {NavLink} from "react-router-dom";
 
 const Header = () => {
     return (
         <header className="header">
             <nav className="container header__nav">
                 <div className="logo">
-                    <a href="#">
+                    <NavLink to="/testtask">
                         <img src={logo} alt="testtask logo"/>
-                    </a>
+                    </NavLink>
                 </div>
                 <div className="header__btns">
                     <Button>Users</Button>
