@@ -46,8 +46,8 @@ const WorkGetRequest = () => {
                         <Card key={item.id} {...item} />
                     ))
                 }
-                {isLoading && <Preload />}
             </div>
+                {isLoading && <Preload />}
             {
                 totalPage >= page && (
                                         <Button
