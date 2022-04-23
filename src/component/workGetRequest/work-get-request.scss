@@ -14,7 +14,7 @@
   &__list{
     width: 100%;
     margin-top: 50px;
-    @include flex(center, space-around);
+    @include flex(center, flex-start);
     flex-wrap: wrap;
     gap: 29px;
 
