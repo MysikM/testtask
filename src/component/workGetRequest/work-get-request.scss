@@ -19,11 +19,12 @@
     gap: 29px;
 
     @include medium {
-      gap: 16px
+      gap: 16px;
+      @include flex(center, center);
     }
 
     @include  small {
-      gap: 20px
+      gap: 20px;
     }
   }
   &__btn{
